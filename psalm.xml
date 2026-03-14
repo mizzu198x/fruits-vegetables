@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<psalm
+        errorLevel="1"
+        runTaintAnalysis="true"
+        resolveFromConfigFile="true"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="https://getpsalm.org/schema/config"
+        xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
+  <projectFiles>
+    <directory name="src" />
+    <ignoreFiles>
+      <directory name="vendor" />
+    </ignoreFiles>
+  </projectFiles>
+
+<!--    <plugins>-->
+<!--        <pluginClass class="Psalm\SymfonyPsalmPlugin\Plugin"/>-->
+<!--    </plugins>-->
+<!--    <stubs>-->
+<!--        <file name="stubs/taint-symfony.php" />-->
+<!--    </stubs>-->
+
+    <issueHandlers>
+    <DeprecatedMethod errorLevel="info" />
+    <DeprecatedProperty errorLevel="info" />
+    <DeprecatedClass errorLevel="info" />
+    <DeprecatedConstant errorLevel="info" />
+    <DeprecatedFunction errorLevel="info" />
+    <DeprecatedInterface errorLevel="info" />
+    <DeprecatedTrait errorLevel="info" />
+
+    <PropertyNotSetInConstructor errorLevel="info" />
+    <MissingConstructor errorLevel="info" />
+    <MissingClosureParamType errorLevel="info" />
+    <MissingClosureReturnType errorLevel="info" />
+
+    <TaintedHtml errorLevel="error"/>
+    <TaintedSql errorLevel="error"/>
+    <TaintedShell errorLevel="error"/>
+    <TaintedInput errorLevel="error"/>
+    </issueHandlers>
+</psalm>

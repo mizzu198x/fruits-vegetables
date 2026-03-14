@@ -1,0 +1,767 @@
+{
+	"info": {
+		"_postman_id": "1a478234-dad9-4d80-a564-030cc19cc4dc",
+		"name": "fruits-vegetables",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7022677"
+	},
+	"item": [
+		{
+			"name": "Fruits",
+			"item": [
+				{
+					"name": "Fruits Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost/api/v0/fruits?query=a&minQty=10&maxQty=100&unit=kg",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"fruits"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "a"
+								},
+								{
+									"key": "minQty",
+									"value": "10"
+								},
+								{
+									"key": "maxQty",
+									"value": "100"
+								},
+								{
+									"key": "unit",
+									"value": "kg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fruits Add - Existed",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goldenId\": 2,\n    \"name\": \"Grapes\",\n    \"quantity\": 2,\n    \"unit\": \"kg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/fruit",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"fruit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fruits Add",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goldenId\": 100,\n    \"name\": \"Grapes\",\n    \"quantity\": 2,\n    \"unit\": \"kg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/fruit",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"fruit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fruits Update - Not found",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goldenId\": 100,\n    \"name\": \"Grapes\",\n    \"quantity\": 1500,\n    \"unit\": \"g\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/fruit/100",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"fruit",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fruits Update - With Vegetable ID - Invalid Type",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goldenId\": 100,\n    \"name\": \"Grapes\",\n    \"quantity\": 1500,\n    \"unit\": \"g\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/fruit/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"fruit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fruits Update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goldenId\": 100,\n    \"name\": \"Grapes\",\n    \"quantity\": 1500,\n    \"unit\": \"g\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/fruit/21",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"fruit",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fruits Delete - Not found",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/fruit/100",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"fruit",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fruits Delete",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/fruit/21",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"fruit",
+								"21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vegetable",
+			"item": [
+				{
+					"name": "Vegetables Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost/api/v0/vegetables?query=a&minQty=10&maxQty=100&unit=kg",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"vegetables"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "a"
+								},
+								{
+									"key": "minQty",
+									"value": "10"
+								},
+								{
+									"key": "maxQty",
+									"value": "100"
+								},
+								{
+									"key": "unit",
+									"value": "kg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vegetables Add - Existed Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goldenId\": 1,\n    \"name\": \"Potatoes\",\n    \"quantity\": 2,\n    \"unit\": \"kg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/vegetable",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"vegetable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vegetables Add",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goldenId\": 200,\n    \"name\": \"Potatoes\",\n    \"quantity\": 2,\n    \"unit\": \"kg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/vegetable",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"vegetable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vegetables Update - Not found",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goldenId\": 200,\n    \"name\": \"Potatoes\",\n    \"quantity\": 1500,\n    \"unit\": \"g\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/vegetable/100",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"vegetable",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vegetables Update - With Fruit ID - Invalid Type",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goldenId\": 200,\n    \"name\": \"Potatoes\",\n    \"quantity\": 1500,\n    \"unit\": \"g\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/vegetable/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"vegetable",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vegetables Update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"goldenId\": 200,\n    \"name\": \"Potatoes\",\n    \"quantity\": 1500,\n    \"unit\": \"g\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/vegetable/22",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"vegetable",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fruits Delete - Not found Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/vegetable/100",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"vegetable",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vegetables Delete",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/v0/vegetable/22",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v0",
+								"vegetable",
+								"22"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Broadcast",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "broadcaster",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"Carrot\",\n    \"type\": \"vegetable\",\n    \"quantity\": 10922,\n    \"unit\": \"kg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost/api/v0/broadcast-listener/plant",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v0",
+						"broadcast-listener",
+						"plant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,181 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Method App\\Command\\DataImportCommand\:\:doRequest\(\) has parameter \$content with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Command/DataImportCommand.php
+
+		-
+			message: '#^Method App\\Command\\DataImportCommand\:\:loadFile\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Command/DataImportCommand.php
+
+		-
+			message: '#^Method App\\Command\\DataImportCommand\:\:loadFile\(\) should return array but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Command/DataImportCommand.php
+
+		-
+			message: '#^Method App\\Contract\\Request\\Body\\BroadcastPlantRequest\:\:getContext\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Contract/Request/Body/BroadcastPlantRequest.php
+
+		-
+			message: '#^Method App\\Contract\\Request\\Body\\CreatePlantRequest\:\:getContext\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Contract/Request/Body/CreatePlantRequest.php
+
+		-
+			message: '#^Method App\\Contract\\Response\\ErrorResponse\:\:toArray\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Contract/Response/ErrorResponse.php
+
+		-
+			message: '#^Property App\\Contract\\Response\\ErrorResponse\:\:\$errorList type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Contract/Response/ErrorResponse.php
+
+		-
+			message: '#^Property App\\Contract\\Response\\SearchPlantResponse\:\:\$items type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Contract/Response/SearchPlantResponse.php
+
+		-
+			message: '#^Method App\\Exception\\ContextualException\:\:addContext\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Exception/ContextualException.php
+
+		-
+			message: '#^Method App\\Exception\\ContextualException\:\:forContext\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Exception/ContextualException.php
+
+		-
+			message: '#^Method App\\Exception\\ContextualException\:\:getContext\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Exception/ContextualException.php
+
+		-
+			message: '#^Method App\\Exception\\ContextualException\:\:setContext\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Exception/ContextualException.php
+
+		-
+			message: '#^Property App\\Exception\\ContextualException\:\:\$context type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Exception/ContextualException.php
+
+		-
+			message: '#^Method App\\Helper\\ContextualInterface\:\:getContext\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Helper/ContextualInterface.php
+
+		-
+			message: '#^Class App\\Repository\\PlantRepository has PHPDoc tag @method for method findBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/PlantRepository.php
+
+		-
+			message: '#^Class App\\Repository\\PlantRepository has PHPDoc tag @method for method findBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/PlantRepository.php
+
+		-
+			message: '#^Class App\\Repository\\PlantRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/PlantRepository.php
+
+		-
+			message: '#^Class App\\Repository\\PlantRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/PlantRepository.php
+
+		-
+			message: '#^Method App\\Repository\\PlantRepository\:\:findByType\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/PlantRepository.php
+
+		-
+			message: '#^Method App\\Repository\\PlantRepository\:\:findByTypeAndSearchCriterial\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/PlantRepository.php
+
+		-
+			message: '#^Method App\\Repository\\PlantRepository\:\:findByTypeAndSearchCriterial\(\) should return array but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Repository/PlantRepository.php
+
+		-
+			message: '#^Method App\\Serializer\\Request\\RequestBodyResolver\:\:resolve\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Serializer/Request/RequestBodyResolver.php
+
+		-
+			message: '#^PHPDoc tag @var for variable \$data has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Serializer/Request/RequestBodyResolver.php
+
+		-
+			message: '#^Method App\\Serializer\\Request\\RequestQueryResolver\:\:resolve\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Serializer/Request/RequestQueryResolver.php
+
+		-
+			message: '#^Method App\\Service\\Collection\\AbstractPlantCollection\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/Collection/AbstractPlantCollection.php
+
+		-
+			message: '#^Method App\\Service\\Collection\\AbstractPlantCollection\:\:search\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/Collection/AbstractPlantCollection.php
+
+		-
+			message: '#^Method App\\Service\\Collection\\CollectionInterface\:\:list\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/Collection/CollectionInterface.php
+
+		-
+			message: '#^Method App\\Service\\Collection\\CollectionInterface\:\:search\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/Collection/CollectionInterface.php
+
+		-
+			message: '#^Method App\\Service\\Collection\\CollectionResolver\:\:__construct\(\) has parameter \$collections with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/Collection/CollectionResolver.php
+
+		-
+			message: '#^Method App\\Service\\Plant\\ResponseFactory\:\:createSearchResponse\(\) has parameter \$items with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/Plant/ResponseFactory.php

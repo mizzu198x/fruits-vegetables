@@ -4,7 +4,7 @@
 ```shell
 bin/console data:import
 ```
-- Broadcast api | server - server | async | see [fruits-vegetables.postman_collection.json](Postman/fruits-vegetables.postman_collection.json)
+- Broadcast api | server - server | async | see [fruits-vegetables.postman_collection.json](tests/PostmanTests/fruits-vegetables.postman_collection.json)
 ```shell
 curl --location 'https://localhost/api/v0/broadcast-listener/plant' \
 --header 'Content-Type: application/json' \
@@ -17,11 +17,11 @@ curl --location 'https://localhost/api/v0/broadcast-listener/plant' \
     "unit": "g"
 }'
 ```
-- Search api | fruit - vegetable separate endpoint | see [fruits-vegetables.postman_collection.json](Postman/fruits-vegetables.postman_collection.json)
+- Search api | fruit - vegetable separate endpoint | see [fruits-vegetables.postman_collection.json](tests/PostmanTests/fruits-vegetables.postman_collection.json)
 ```shell
 curl --location 'https://localhost/api/v0/fruits?query=a&minQty=10&maxQty=100&unit=kg'
 ```
-- Add new api | crud | fruit - vegetable separate endpoint | see [fruits-vegetables.postman_collection.json](Postman/fruits-vegetables.postman_collection.json)
+- Add new api | crud | fruit - vegetable separate endpoint | see [fruits-vegetables.postman_collection.json](tests/PostmanTests/fruits-vegetables.postman_collection.json)
 ```shell
 # 409 Conflict
 curl --location 'https://localhost/api/v0/fruit' \
@@ -45,7 +45,7 @@ curl --location 'https://localhost/api/v0/fruit' \
     "unit": "kg"
 }'
 ```
-- Update api | crud | fruit - vegetable separate endpoint | see [fruits-vegetables.postman_collection.json](Postman/fruits-vegetables.postman_collection.json)
+- Update api | crud | fruit - vegetable separate endpoint | see [fruits-vegetables.postman_collection.json](tests/PostmanTests/fruits-vegetables.postman_collection.json)
 ```shell
 # 404 Not found
 curl --location --request PATCH 'https://localhost/api/v0/fruit/100' \
@@ -80,7 +80,7 @@ curl --location --request PATCH 'https://localhost/api/v0/fruit/2' \
     "unit": "kg"
 }'
 ```
-- Delete api | crud | fruit - vegetable separate endpoint | see [fruits-vegetables.postman_collection.json](Postman/fruits-vegetables.postman_collection.json)
+- Delete api | crud | fruit - vegetable separate endpoint | see [fruits-vegetables.postman_collection.json](tests/PostmanTests/fruits-vegetables.postman_collection.json)
 ```shell
 # 404 
 curl --location --request DELETE 'https://localhost/api/v0/fruit/100' \

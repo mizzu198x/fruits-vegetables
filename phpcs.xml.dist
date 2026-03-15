@@ -6,6 +6,7 @@
     <arg value="sp"/>
 
     <file>src/</file>
+    <file>tests/</file>
 
     <exclude-pattern>src/tests</exclude-pattern>
     <exclude-pattern>src/Migrations</exclude-pattern>

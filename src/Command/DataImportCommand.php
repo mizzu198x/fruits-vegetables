@@ -70,7 +70,7 @@ class DataImportCommand extends Command
             'POST',
             server: [
                 'HTTP_AUTHORIZATION' => $authHeader,
-                'HTTP_CONTENT_TYPE' => 'application/json',
+                'CONTENT_TYPE' => 'application/json',
             ],
             content: json_encode($content) ?: '',
         );

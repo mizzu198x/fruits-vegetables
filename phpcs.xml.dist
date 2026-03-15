@@ -24,6 +24,7 @@
         <exclude name="Symfony.Commenting.FunctionComment.MissingParamTag" />
         <exclude name="Symfony.Commenting.FunctionComment.MissingReturn" />
         <exclude name="Symfony.Formatting.BlankLineBeforeReturn.MissedBlankLineBeforeReturn" />
+        <exclude name="Symfony.Objects.ObjectInstantiation.Invalid" />
     </rule>
 
     <!--Line limit is 120 characters-->

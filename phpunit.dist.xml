@@ -17,15 +17,6 @@
         <server name="SHELL_VERBOSITY" value="-1" />
     </php>
 
-    <coverage>
-        <report>
-            <clover outputFile="report/raw/phpunit/clover/coverage-clover.xml"/>
-            <html outputDirectory="report/html/phpunit" lowUpperBound="50" highLowerBound="80"/>
-            <text outputFile="php://stdout" showUncoveredFiles="true"/>
-            <xml outputDirectory="report/raw/phpunit/coverage/coverage-xml/"/>
-        </report>
-    </coverage>
-
     <testsuites>
         <testsuite name="UnitTests">
             <directory>tests/UnitTests</directory>

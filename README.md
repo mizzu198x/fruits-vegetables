@@ -94,11 +94,27 @@ curl --location --request DELETE 'https://localhost/api/v0/fruit/2' \
 ```
 
 ## Code quality
-- docker exec fruits-vegetables-php-1 vendor/bin/phpcs --standard=phpcs.xml.dist
-- docker exec fruits-vegetables-php-1 vendor/bin/php-cs-fixer fix -v --dry-run
-- docker exec fruits-vegetables-php-1 php -d memory_limit=-1 vendor/bin/phpstan analyse
-- docker exec fruits-vegetables-php-1 vendor/bin/psalm
-- docker exec fruits-vegetables-php-1 vendor/bin/phpunit --testsuite=UnitTests
+- phpcs
+```shell
+docker exec fruits-vegetables-php-1 vendor/bin/phpcs --standard=phpcs.xml.dist
+docker exec fruits-vegetables-php-1 vendor/bin/php-cs-fixer fix -v --dry-run
+```
+- phpstan
+```shell
+docker exec fruits-vegetables-php-1 php -d memory_limit=-1 vendor/bin/phpstan analyse
+```
+- psalm
+```shell
+docker exec fruits-vegetables-php-1 vendor/bin/psalm
+```
+- Unit Tests
+```shell
+docker exec fruits-vegetables-php-1 vendor/bin/phpunit
+```
+- Integration Tests
+```shell
+docker exec fruits-vegetables-php-1 vendor/bin/phpunit -c phpunit.integration.xml
+```
 
 ## Docker
 [Symfony Docker](SYMFONY_DOCKER.md)

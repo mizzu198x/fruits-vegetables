@@ -86,6 +86,7 @@
         "phpstan/phpstan": "^2.1",
         "phpunit/phpunit": "^13.0",
         "squizlabs/php_codesniffer": "^4.0",
+        "symfony/browser-kit": "8.0.*",
         "symfony/maker-bundle": "^1.66",
         "vimeo/psalm": "^6.15"
     }

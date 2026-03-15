@@ -48,7 +48,7 @@ class DataImportCommand extends Command
             self::DATA_DIR,
             $filename,
         );
-        $fileContents = \file_get_contents($filePath);
+        $fileContents = @\file_get_contents($filePath);
         if (!$fileContents) {
             throw new \Exception(sprintf('Unable to read file %s', $filename));
         }

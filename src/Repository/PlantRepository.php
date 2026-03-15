@@ -43,7 +43,8 @@ class PlantRepository extends ServiceEntityRepository
         $qb = $this->createQueryBuilder('p')
             ->andWhere('p.type = :type')
             ->setParameter('type', $type)
-            ->orderBy('p.goldenId', 'ASC');
+            ->orderBy('p.goldenId', 'ASC')
+        ;
 
         if (!empty($query)) {
             $qb->andWhere('LOWER(p.name) LIKE LOWER(:name)')

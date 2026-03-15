@@ -29,15 +29,9 @@ abstract class AbstractIntegrationTestCase extends WebTestCase
     public function setUp(): void
     {
         parent::setUp();
-        self::$application->run(new StringInput('d:d:c'));
+        self::$application->run(new StringInput('d:d:c --if-not-exists'));
         self::$application->run(new StringInput('d:m:m -n'));
         self::$application->run(new StringInput('data:import'));
         $this->client = self::getContainer()->get('test.client');
-    }
-
-    public function tearDown(): void
-    {
-        parent::tearDown();
-        self::$application->run(new StringInput('d:d:d -f'));
     }
 }

@@ -92,6 +92,7 @@ curl --location --request DELETE 'https://localhost/api/v0/fruit/2' \
 --header 'Authorization: Basic YWRtaW46YWRtaW4xMjM=' \
 --data ''
 ```
+- All tests were covered by integration tests
 
 ## Code quality
 - phpcs
